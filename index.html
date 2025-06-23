@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercadinho Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Mercadinho Digital</h1>
+
+  
+  <section id="cadastro">
+    <h2>Cadastro</h2>
+    <input type="text" id="novoUsuario" placeholder="Crie seu usuário">
+    <input type="password" id="novaSenha" placeholder="Crie sua senha">
+    <button onclick="fazerCadastro()">Cadastrar</button>
+  </section>
+
+ 
+  <section id="login" class="escondido">
+    <h2>Login</h2>
+    <input type="text" id="usuario" placeholder="Usuário">
+    <input type="password" id="senha" placeholder="Senha">
+    <button onclick="fazerLogin()">Entrar</button>
+  </section>
+
+ 
+  <section id="loja" class="escondido">
+    <h2>Catálogo de Produtos</h2>
+    <div id="produtos"></div>
+
+    <h2>Carrinho de Compras</h2>
+    <ul id="carrinho"></ul>
+    <p>Total: R$ <span id="total">0.00</span></p>
+
+    <button onclick="finalizarCompra()">Finalizar Compra</button>
+  </section>
+
+  <section id="checkout" class="escondido">
+    <h2>Finalizar Compra</h2>
+    
+    <h3>Informações de Entrega</h3>
+    <input type="text" id="nomeCliente" placeholder="Nome Completo">
+    <input type="text" id="endereco" placeholder="Endereço">
+    <input type="text" id="telefone" placeholder="Telefone">
+
+    <h3>Método de Pagamento</h3>
+    <select id="pagamento">
+      <option value="">Selecione</option>
+      <option value="Pix">Pix</option>
+      <option value="Cartão">Cartão</option>
+      <option value="Dinheiro">Dinheiro</option>
+    </select>
+
+    <br><br>
+    <button onclick="confirmarPedido()">Confirmar Pedido</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
